@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --sizeindex: calc(1vw + 1vh);/* в зависимости от индекса будет рассчитывать размер шрифта */
+}
+@font-face {
+  font-family: archivo_m;
+  src: url(../fonts/Archivo-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: archivo_m;
+  src: url(../fonts/Archivo-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: archivo_m;
+  src: url(../fonts/Archivo-Black.ttf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: space_grotesk_m;
+  src: url(../fonts/SpaceGrotesk-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: space_grotesk_m;
+  src: url(../fonts/SpaceGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: space_grotesk_m;
+  src: url(../fonts/SpaceGrotesk-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: space_grotesk_m;
+  src: url(../fonts/SpaceGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+
+body,html {
+  font-family: archivo_m, sans-serif;
+  font-family: space_grotesk_m, sans-serif;
+}
