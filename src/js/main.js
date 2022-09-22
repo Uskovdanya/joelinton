@@ -1,16 +1,10 @@
-const sliderMain = new Swiper('.slider_main', {
-  mousewheel: true,
-  slidesPerView: 2.5,
-  breakpoints: {
-    0: {
-      slidesPerView: 1.5,
-      spaceBetween: 2
-    },
-    680: {
-      slidesPerView: 2.5,
-      spaceBetween: 2
+import sliderMain from './modules/slider';
+import tabs from './modules/tabs';
+import darkMode from './modules/darkMode';
 
-    }
-  }
+window.addEventListener('DOMContentLoaded', () => {
+  "use strict";
+  tabs('.menu-list','.menu__item', '.promo__tabs', 'active');
+
 });
 

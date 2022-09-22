@@ -24,16 +24,7 @@
         </div>
         
       </nav>
-      <div class="navbar__darkmode">
-          
-        <span>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z" stroke="#000201" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z" stroke="#000201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        </span>
-        Switch dark
-      </div>
+      
     </header>
     
 
@@ -44,42 +35,58 @@
       <section class="promo">
         
         <div class="promo__content">
-          <div class="promo__about">
-            <h1 class="promo__about-header">Simply said,<br>
+          <div class="promo__about promo__tabs">
+            <h1 class="promo__header promo__header_about">Simply said,<br>
               I love design and code.</h1>
             <h2 class="promo__about-subheader">And... I love Javanese food</h2>
             <div class="promo__about-text promo__about-text_buttom">Based in the beautiful city of Bali, Indonesia.
             I am currently exploring the <span>UI/UX design, Tailwind-css</span> and <span>NextJS.</span></div>
             <div class="promo__about-text promo__about-text_subtext">I am either smiling or looking super serious. If it's the latter one, I am probably thinking about food.</div>
+            <div class="swiper slider slider_main">
+              <div class="swiper-wrapper slider__wrapper">
+                <div class="swiper-slide slider__item">
+                  <img class="slider__img" src="assets/img/about/project1.jpg" alt="alt">
+                </div>
+                <div class="swiper-slide slider__item">
+                  <img src="assets/img/about/project2.jpg" alt="alt">
+                </div>
+                <div class="swiper-slide slider__item">
+                  <img src="assets/img/about/project3.jpg" alt="alt" class="slider__img">
+                </div>
+                
+              </div>
+              <div class="swiper-button-prev">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.76 7.90667L4.66668 16L12.76 24.0933" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.3333 16H4.89331" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="swiper-button-next">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.76 7.90667L4.66668 16L12.76 24.0933" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.3333 16H4.89331" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+
+
           </div>
 
           
-          <div class="swiper slider slider_main">
-            <div class="swiper-wrapper slider__wrapper">
-              <div class="swiper-slide slider__item">
-                <div class="slider__img" style="background-image: url(assets/img/about/project1.jpg);"></div>
-              </div>
-              <div class="swiper-slide slider__item">
-                <div class="slider__img" style="background-image: url(assets/img/about/project2.jpg);"></div>
-              </div>
-              <div class="swiper-slide slider__item">
-                <div class="slider__img" style="background-image: url(assets/img/about/project3.jpg);"></div>
-              </div>
-              
-            </div>
-            <div class="swiper-button-prev">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.76 7.90667L4.66668 16L12.76 24.0933" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M27.3333 16H4.89331" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
-            <div class="swiper-button-next">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.76 7.90667L4.66668 16L12.76 24.0933" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M27.3333 16H4.89331" stroke="#000201" stroke-opacity="0.2" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </div>
+          
+
+          <div class="promo__works promo__tabs">
+            <h1 class="promo__header">Works</h1>
+            <h2 class="promo__subheader promo__works-subheader">Repository of projects that I worked before.</h2>
+
           </div>
+
+          <div class="promo__resume promo__tabs">
+            <h1 class="promo__header">Resume</h1>
+            <h2 class="promo__subheader promo__resume-subheader">A summary of my education, work history, credentials, and<br> other accomplishments and skills</h2>
+
+          </div>
+
 
           
         </div>
@@ -91,6 +98,17 @@
 
 
     </main>
+
+    <div class="navbar__darkmode">
+          
+      <span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 18.5C15.5899 18.5 18.5 15.5899 18.5 12C18.5 8.41015 15.5899 5.5 12 5.5C8.41015 5.5 5.5 8.41015 5.5 12C5.5 15.5899 8.41015 18.5 12 18.5Z" stroke="#000201" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z" stroke="#000201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      </span>
+      Switch dark
+    </div>
     
     
 

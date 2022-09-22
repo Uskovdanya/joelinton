@@ -70,7 +70,7 @@ body,html {
   /*font-size: calc(var(--sizeindex) * .8);*//*крутое свойство для шрифта*/
 }
 .promo__content {
-  overflow: hidden;
+
 }
 .header {
   display: flex;
@@ -119,6 +119,9 @@ body,html {
   color: var(--black);
 }
 .navbar__darkmode {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
   display: flex;
   align-items: center;
   font-family: 'archivo_m';
@@ -136,13 +139,16 @@ body,html {
 .promo {
   margin-top: 138px;
 }
-.promo__about-header {
+.promo__header {
   font-family: 'archivo_m';
   font-weight: 900;
   font-size: 48px;
   line-height: 56px;
   letter-spacing: -0.8px;
   color: var(--black);
+  margin-bottom: 24px;
+}
+.promo__header_about {
   margin-bottom: 16px;
 }
 .promo__about-subheader {
@@ -176,12 +182,26 @@ body,html {
   margin-bottom: 21px;
 }
 
-.slider__wrapper {
-  transition: var(--transition)!important;
+/* Works */
+
+
+.promo__subheader {
+  font-family: 'space_grotesk_m';
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.25px;
+  color: rgba(0, 2, 1, 0.6);
 }
-
-
-
+.promo__works-subheader {
+  margin-bottom: 54px;
+}
+.active a {
+  color: var(--black);
+}
+.promo__resume-subheader {
+  margin-bottom: 40px;
+}
 
 
 
