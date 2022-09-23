@@ -9,10 +9,32 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-function darkMode() {
-  const header = document.querySelectorAll('');
+const switcher = document.querySelector('.navbar__switcher');
+const span = document.querySelector('.span');
+
+function change() {
+  if (span.value === "Switch dark") {
+    span.value === "Switch light";
+  } else {
+    span.value === "Switch dark";
+  }
 }
 
+function darkMode() {
+  const body = document.body;
+  const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+  localStorage.setItem('darkmode', !wasDarkmode);
+  body.classList.toggle('dark-mode', !wasDarkmode);
+  change();
+}
+
+switcher.addEventListener('click', darkMode);
+
+function onload() {
+  document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+}
+
+document.addEventListener('DOMContentLoaded', onload);
 /* harmony default export */ __webpack_exports__["default"] = (darkMode);
 
 /***/ }),
