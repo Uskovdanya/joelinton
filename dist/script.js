@@ -13,10 +13,10 @@ const switcher = document.querySelector('.navbar__switcher');
 const span = document.querySelector('.span');
 
 function change() {
-  if (span.value === "Switch dark") {
-    span.value === "Switch light";
+  if (span.innerHTML.match(/\bdark\b/)) {
+    span.innerHTML = "Switch light";
   } else {
-    span.value === "Switch dark";
+    span.innerHTML = "Switch dark";
   }
 }
 
@@ -48,16 +48,11 @@ document.addEventListener('DOMContentLoaded', onload);
 __webpack_require__.r(__webpack_exports__);
 const sliderMain = new Swiper('.slider_main', {
   mousewheel: true,
-  slidesPerView: 2.5,
-  breakpoints: {
-    0: {
-      slidesPerView: 1.5,
-      spaceBetween: 2
-    },
-    680: {
-      slidesPerView: 2.5,
-      spaceBetween: 2
-    }
+  slidesPerView: 2.2,
+  spaceBetween: 12,
+  navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev'
   }
 });
 /* harmony default export */ __webpack_exports__["default"] = (sliderMain);

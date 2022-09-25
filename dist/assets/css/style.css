@@ -60,11 +60,18 @@ ul {
   src: url(../fonts/SpaceGrotesk-Bold.ttf);
   font-weight: 700;
 }
+body {
+  display: flex;
+  
+}
+main {
+  min-width: 0;
+}
 body,html {
   width: 100%;
   height: 100%;
   
-  display: flex;
+  
   gap: 282px;
   /*overflow: hidden;*/ /* нужно указывать для конкретной секции */
   /*font-size: calc(var(--sizeindex) * .8);*//*крутое свойство для шрифта*/
@@ -91,9 +98,7 @@ body.dark-mode {
   --lightBlack: #D3902A;
 
 }
-.promo__content {
 
-}
 .header {
   display: flex;
   flex-direction: column;
@@ -182,6 +187,7 @@ body.dark-mode {
 .promo__header_about {
   margin-bottom: 16px;
 }
+
 .promo__about-subheader {
   font-family: 'space_grotesk_m';
   font-weight: 700;
@@ -234,7 +240,66 @@ body.dark-mode {
   margin-bottom: 40px;
 }
 
+.promo__contacts-subheader {
+  margin-bottom: 24px;
+}
+.promo__swiper-container {
+  position: relative;
+}
+.slider__img {
+  width: 100%;
+  
+}
+.slider__item {
+  position: relative;
+}
 
+.slider__hover {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.slider__item:hover .slider__hover {
+  opacity: 1;
+}
+.slider__hover span {
+  font-family: 'space_grotesk_m';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: -0.25px;
+  color: #ffff;
+  margin-left: 8px;
+}
+.swiper-next, .swiper-prev {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: -42px;
+  cursor: pointer;
+  stroke: var(--black);
+}
+
+
+.swiper-button-disabled svg path {
+  stroke-opacity: 0.2;
+}
+.swiper-prev {
+  right: 64px;
+  
+}
+.swiper-next {
+  transform: rotate(180deg);
+  right: 24px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
 
 
 

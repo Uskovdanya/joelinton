@@ -1,12 +1,13 @@
 const switcher = document.querySelector('.navbar__switcher');
 const span = document.querySelector('.span');
+
 function change() {
-  if (span.value === "Switch dark") {
-    span.value === "Switch light";
-  }  else {
-    span.value === "Switch dark";
+  if (span.innerHTML.match(/\bdark\b/))  {
+    span.innerHTML = "Switch light";
+  } else {
+    span.innerHTML = "Switch dark";
   }
-    
+
 }
 function darkMode() {
   const body = document.body;
