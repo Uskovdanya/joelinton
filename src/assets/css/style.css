@@ -65,14 +65,15 @@ body {
   
 }
 main {
-  min-width: 0;
+  /*min-width: 0;*/
+  width: 1032px;
 }
 body,html {
   width: 100%;
   height: 100%;
   
   
-  gap: 282px;
+  column-gap: 282px;
   /*overflow: hidden;*/ /* нужно указывать для конкретной секции */
   /*font-size: calc(var(--sizeindex) * .8);*//*крутое свойство для шрифта*/
 }
@@ -230,6 +231,7 @@ body.dark-mode {
   letter-spacing: -0.25px;
   color: var(--menuText);
 }
+
 .promo__works-subheader {
   margin-bottom: 54px;
 }
@@ -265,6 +267,7 @@ body.dark-mode {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  transition: opacity .75s ease-out;
 }
 .slider__item:hover .slider__hover {
   opacity: 1;
@@ -300,6 +303,27 @@ body.dark-mode {
   right: 24px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
 }
+.promo__works-content {
+  display: grid;
+  gap: 24px;
+  grid-template: repeat(1, 246px) / repeat(3, 328px);
+}
+
+.promo__works-menu {
+  display: flex;
+  column-gap: 40px;
+}
+.promo__works-link {
+  font-family: 'space_grotesk_m';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  color: var(--grayColor);
+  cursor: pointer;
+}
+
 
 
 
