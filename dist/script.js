@@ -39,6 +39,81 @@ document.addEventListener('DOMContentLoaded', onload);
 
 /***/ }),
 
+/***/ "./src/js/modules/filter.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/filter.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const filter = (headerSelector, tabSelector, contentSelector, activeClass) => {
+  const header = document.querySelector(headerSelector),
+        tab = document.querySelectorAll(tabSelector),
+        content = document.querySelectorAll(contentSelector);
+  header.addEventListener('click', e => {
+    const target = e.target;
+
+    if (target && (target.classList.contains(tabSelector.replace(/\./, "")) || target.parentNode.classList.contains(tabSelector.replace(/\./, "")))) {
+      // отрезаем точку, така сюда приходит класс
+      const targetId = e.target.dataset.id;
+      tab.forEach(listItem => listItem.classList.remove(activeClass));
+      target.classList.add(activeClass);
+
+      switch (targetId) {
+        case 'all':
+          getItems('promo__works-img');
+          break;
+
+        case 'productDesign':
+          getItems(targetId);
+          break;
+
+        case 'uxResearch':
+          getItems(targetId);
+          break;
+
+        case 'logo':
+          getItems(targetId);
+          break;
+
+        case 'darkDesign':
+          getItems(targetId);
+          break;
+
+        case 'webflow':
+          getItems(targetId);
+          break;
+
+        case 'socialMedia':
+          getItems(targetId);
+          break;
+
+        case 'videoEffect':
+          getItems(targetId);
+          break;
+
+        case 'nonProfit':
+          getItems(targetId);
+          break;
+      }
+    }
+  });
+
+  function getItems(className) {
+    content.forEach(item => {
+      if (item.classList.contains(className)) {
+        item.style.display = 'block';
+      } else {
+        item.style.display = 'none';
+      }
+    });
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (filter);
+
+/***/ }),
+
 /***/ "./src/js/modules/slider.js":
 /*!**********************************!*\
   !*** ./src/js/modules/slider.js ***!
@@ -157,6 +232,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_slider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/slider */ "./src/js/modules/slider.js");
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_darkMode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/darkMode */ "./src/js/modules/darkMode.js");
+/* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ "./src/js/modules/filter.js");
+
 
 
 
@@ -164,6 +241,7 @@ window.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])('.menu-list', '.menu__item', '.promo__tabs', 'active');
+  (0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__["default"])('.promo__works-menu', '.promo__works-link', '.promo__works-img', 'promo__works-link_active');
 });
 }();
 /******/ })()
