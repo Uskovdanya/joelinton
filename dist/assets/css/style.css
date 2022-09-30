@@ -86,10 +86,12 @@ body {
   --menuText: #959390;
   --accentColor: #D3902A;
   --grayColor: rgba(0, 2, 1, 0.6);
+  --grayColorResume: rgba(0, 2, 1, 0.6);
   --lightBlack: rgba(0, 2, 1, 0.8);
   --lineColor: rgba(0, 2, 1, 0.8);
   --shadowColor: rgba(0, 0, 0, 0.25);
   --lineGrayColor: rgba(0, 0, 0, 0.15);
+  --buttonTextColor: #F8F4F0;
   background-color: var(--background-color);
   transition: var(--transition);
 
@@ -101,6 +103,8 @@ body.dark-mode {
   --lightBlack: #D3902A;
   --lineColor: rgba(255, 252, 245, 0.8);
   --lineGrayColor: rgba(255, 252, 245, 0.15);
+  --grayColorResume: rgba(255, 252, 245, 0.7);
+  --buttonTextColor: #000201;
 
 }
 
@@ -247,7 +251,7 @@ body.dark-mode {
 }
 
 .promo__contacts-subheader {
-  margin-bottom: 24px;
+  margin-bottom: 60px;
 }
 .promo__swiper-container {
   position: relative;
@@ -347,5 +351,95 @@ body.dark-mode {
 }
 
 
+.promo__resume-work {
+  display: flex;
+  column-gap: 78px;
+  margin-bottom: 24px;
+}
+.promo__resume-work_gap {
+  column-gap: 45px;
+}
+.promo__resume-year {
+  font-family: 'space_grotesk_m';
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: var(--black);
+}
+.promo__resume-profession {
+  font-family: 'space_grotesk_m';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.25px;
+  color: var(--black);
+  margin-bottom: 4px;
+}
+.promo__resume-place {
+  font-family: 'space_grotesk_m';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: var(--grayColorResume);
+  margin-bottom: 16px;
+  
+}
+.promo__resume-performance {
+  font-family: 'space_grotesk_m';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.25px;
+  color: var(--grayColorResume);
+  margin-left: 22px;
+}
 
+.promo__resume-performance {
+  list-style: initial;
+}
+.promo__contacts-h1 {
+  font-family: 'space_grotesk_m';
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.25px;
+  color: var(--black);
+  margin-bottom: 4px;
+
+}
+.promo__contacts-h1 span {
+  font-family: 'space_grotesk_m';
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.25px;
+  color: #F73232;
+  margin-left: 2px;
+}
+.promo__contacts-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.promo__contacts-block {
+  display: flex;
+  column-gap: 12px
+}
+.promo__contacts-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__btn {
+  font-family: 'space_grotesk_m';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.25px;
+  color: var(--buttonTextColor);
+  background-color: var(--black);
+}
+
+ 
 
