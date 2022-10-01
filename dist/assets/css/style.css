@@ -3,14 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*:root {
-  --dark: #0C0B05;
-  --sizeindex: calc(1vw + 1vh);
-  --transition: .75s cubic-bezier(.2, .6, 0, 1);
-  --white: #fff;
-  --black: #000201;
-  --graytext: #959390;
-}*/
+
 button {
   cursor: pointer;
 }
@@ -92,11 +85,13 @@ body {
   --shadowColor: rgba(0, 0, 0, 0.25);
   --lineGrayColor: rgba(0, 0, 0, 0.15);
   --buttonTextColor: #F8F4F0;
+  --inputColor: #F1ECE6;
+  
   background-color: var(--background-color);
-  transition: var(--transition);
+  transition: all var(--transition);
 
 }
-body.dark-mode {
+.dark-mode {
   --background-color: #0C0B05;
   --black: #FFFCF5;
   --grayColor: rgba(255, 252, 245, 0.8);
@@ -105,6 +100,7 @@ body.dark-mode {
   --lineGrayColor: rgba(255, 252, 245, 0.15);
   --grayColorResume: rgba(255, 252, 245, 0.7);
   --buttonTextColor: #000201;
+  --inputColor: #151413;
 
 }
 
@@ -430,7 +426,59 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
 }
-
+.promo__contacts-in {
+  padding: 16px;
+  width: 400px;
+  height: 55px;
+  background: var(--inputColor);
+  border: none;
+  font-family: 'space_grotesk_m';
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: -0.25px;
+  color: var(--black);
+}
+.promo__contacts-in:focus {
+  outline: none;
+  border: 1px solid #D3902A;
+}
+.promo__contacts-in:active {
+  outline: none;
+  border: 1px solid #D3902A;
+}
+.promo__contacts-input placeholder {
+  color: #9D9690;
+}
+.promo__contacts-email {
+  width: 579px;
+}
+.promo__contacts-select {
+  color: #9D9690;
+  width: 167px;
+}
+.promo__contacts-option {
+  color: var(--black);
+}
+.promo__contacts-textarea {
+  display: flex;
+  flex-direction: column;
+}
+.promo__contacts-textarea textarea {
+  padding: 16px;
+  width: 579px;
+  height: 240px;
+  background: var(--inputColor);
+  border: none;
+  resize:none;
+  color: var(--black);
+}
+.promo__contacts-textarea textarea:focus {
+  outline: none;
+}
+.promo__contacts-textarea textarea:active {
+  outline: none;
+}
 .contacts__btn {
   font-family: 'space_grotesk_m';
   font-weight: 400;
@@ -439,6 +487,8 @@ body.dark-mode {
   letter-spacing: -0.25px;
   color: var(--buttonTextColor);
   background-color: var(--black);
+  width: 164px;
+  height: 55px;
 }
 
  

@@ -9,33 +9,30 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-const switcher = document.querySelector('.navbar__switcher');
-const span = document.querySelector('.span');
+const dark = () => {
+  const switcher = document.querySelector('.navbar__switcher');
+  const span = document.querySelector('.span-switcher');
 
-function change() {
-  if (span.innerHTML.match(/\bdark\b/)) {
-    span.innerHTML = "Switch light";
-  } else {
-    span.innerHTML = "Switch dark";
+  function change() {
+    if (span.innerHTML.match(/\bdark\b/)) {
+      span.innerHTML = "Switch light";
+    } else {
+      span.innerHTML = "Switch dark";
+    }
   }
-}
 
-function darkMode() {
-  const body = document.body;
-  const wasDarkmode = localStorage.getItem('darkmode') === 'true';
-  localStorage.setItem('darkmode', !wasDarkmode);
-  body.classList.toggle('dark-mode', !wasDarkmode);
-  change();
-}
+  function darkMode() {
+    const body = document.body;
+    const wasDarkmode = localStorage.getItem('darkmode') === 'true';
+    localStorage.setItem('darkmode', !wasDarkmode);
+    body.classList.toggle('dark-mode', !wasDarkmode);
+    change();
+  }
 
-switcher.addEventListener('click', darkMode);
+  switcher.addEventListener('click', darkMode); //document.addEventListener('DOMContentLoaded', onload);
+};
 
-function onload() {
-  document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
-}
-
-document.addEventListener('DOMContentLoaded', onload);
-/* harmony default export */ __webpack_exports__["default"] = (darkMode);
+/* harmony default export */ __webpack_exports__["default"] = (dark);
 
 /***/ }),
 
@@ -114,6 +111,21 @@ const filter = (headerSelector, tabSelector, contentSelector, activeClass) => {
 
 /***/ }),
 
+/***/ "./src/js/modules/onload.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/onload.js ***!
+  \**********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+const onload = () => {
+  document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true');
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (onload);
+
+/***/ }),
+
 /***/ "./src/js/modules/slider.js":
 /*!**********************************!*\
   !*** ./src/js/modules/slider.js ***!
@@ -121,16 +133,19 @@ const filter = (headerSelector, tabSelector, contentSelector, activeClass) => {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-const sliderMain = new Swiper('.slider_main', {
-  mousewheel: true,
-  slidesPerView: 2.2,
-  spaceBetween: 12,
-  navigation: {
-    nextEl: '.swiper-next',
-    prevEl: '.swiper-prev'
-  }
-});
-/* harmony default export */ __webpack_exports__["default"] = (sliderMain);
+const slider = () => {
+  const sliderMain = new Swiper('.slider_main', {
+    mousewheel: true,
+    slidesPerView: 2.2,
+    spaceBetween: 12,
+    navigation: {
+      nextEl: '.swiper-next',
+      prevEl: '.swiper-prev'
+    }
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (slider);
 
 /***/ }),
 
@@ -233,6 +248,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
 /* harmony import */ var _modules_darkMode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/darkMode */ "./src/js/modules/darkMode.js");
 /* harmony import */ var _modules_filter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/filter */ "./src/js/modules/filter.js");
+/* harmony import */ var _modules_onload__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/onload */ "./src/js/modules/onload.js");
+
 
 
 
@@ -240,6 +257,9 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
+  (0,_modules_darkMode__WEBPACK_IMPORTED_MODULE_2__["default"])();
+  (0,_modules_onload__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])();
   (0,_modules_tabs__WEBPACK_IMPORTED_MODULE_1__["default"])('.menu-list', '.menu__item', '.promo__tabs', 'active');
   (0,_modules_filter__WEBPACK_IMPORTED_MODULE_3__["default"])('.promo__works-menu', '.promo__works-link', '.promo__works-img', 'promo__works-link_active');
 });

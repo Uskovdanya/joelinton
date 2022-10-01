@@ -227,17 +227,21 @@
               <div class="promo__contacts-block">
                 <div class="promo__contacts-input">
                   <label class="promo__contacts-h1" for="name">Name<span>*</span></label>
-                  <input required name="name" id="name" type="text" placeholder="Joao Felix">
+                  <input class="promo__contacts-in" required name="name" id="name" type="text" placeholder="Joao Felix">
                 </div>
                 <div class="promo__contacts-title">
                   <div class="promo__contacts-h1">Title<span>*</span></div>
-                  <select name="" id="">Select</select>
+                  <select  class="promo__contacts-in promo__contacts-select" name="select" id="select">
+                    <option selected="true" value="Select" disabled="disabled">Select</option>
+                    <option class="promo__contacts-option" value="Question">Question</option>
+                    <option class="promo__contacts-option" value="Work">Work</option>
+                  </select>
 
                 </div>
               </div>
               <div class="promo__contacts-input">
                 <label class="promo__contacts-h1" for="email">Email<span>*</span></label>
-                <input required name="email" id="email" type="email" placeholder="Enter your email">
+                <input class="promo__contacts-in promo__contacts-email" required name="email" id="email" type="email" placeholder="Enter your email">
               </div>
               <div class="promo__contacts-textarea">
                 <label class="promo__contacts-h1" for="text">Message<span>*</span></label>
@@ -269,7 +273,7 @@
       <path class="sun" d="M19.14 19.14L19.01 19.01M19.01 4.99L19.14 4.86L19.01 4.99ZM4.86 19.14L4.99 19.01L4.86 19.14ZM12 2.08V2V2.08ZM12 22V21.92V22ZM2.08 12H2H2.08ZM22 12H21.92H22ZM4.99 4.99L4.86 4.86L4.99 4.99Z" stroke="#000201" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       
-      <span class="span">Switch dark</span>
+      <span class="span-switcher">Switch dark</span>
     </div>
     
     
